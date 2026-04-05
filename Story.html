@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#995200",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#e4e3d8",
+                    "secondary-container": "#ffc4b8",
+                    "on-secondary-container": "#812a19",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#8d3321",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#fccc38",
+                    "tertiary-fixed": "#ff9734",
+                    "on-primary-container": "#594500",
+                    "on-primary-fixed-variant": "#644e00",
+                    "inverse-on-surface": "#9e9d96",
+                    "surface-container-high": "#efeee5",
+                    "outline": "#81817a",
+                    "surface-container-highest": "#e9e9de",
+                    "on-tertiary-container": "#4d2600",
+                    "surface-bright": "#fefcf4",
+                    "error": "#be2d06",
+                    "surface-tint": "#7c6100",
+                    "error-dim": "#b92902",
+                    "primary": "#7c6100",
+                    "on-tertiary-fixed-variant": "#5a2e00",
+                    "inverse-primary": "#fccc38",
+                    "primary-fixed": "#fccc38",
+                    "surface-container": "#f5f4eb",
+                    "outline-variant": "#bab9b2",
+                    "secondary-fixed": "#ffc4b8",
+                    "surface": "#fefcf4",
+                    "on-error-container": "#520c00",
+                    "on-tertiary-fixed": "#291200",
+                    "secondary-dim": "#973a27",
+                    "surface-variant": "#e9e9de",
+                    "on-secondary-fixed": "#661607",
+                    "secondary": "#a74632",
+                    "on-primary-fixed": "#423200",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#0e0f0a",
+                    "surface-container-low": "#fbf9f1",
+                    "error-container": "#f95630",
+                    "tertiary-container": "#ff9734",
+                    "tertiary-dim": "#874800",
+                    "on-background": "#383833",
+                    "on-surface": "#383833",
+                    "primary-dim": "#6e5500",
+                    "secondary-fixed-dim": "#ffb0a0",
+                    "primary-fixed-dim": "#edbe29",
+                    "tertiary-fixed-dim": "#f58600",
+                    "on-surface-variant": "#65655f",
+                    "on-error": "#ffffff",
+                    "background": "#fefcf4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-blob {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+        .hover-3d-shadow {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .hover-3d-shadow:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -12px rgba(124, 97, 0, 0.15), 0 18px 36px -18px rgba(0, 0, 0, 0.2);
+        }
+        .founder-mask {
+            mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="dark:bg-stone-900/90 backdrop-blur-md sticky top-0 z-50 rounded-b-[3rem] shadow-sm dark:shadow-none bg-white">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl" href="index.html">
+<img alt="Urjaa Mindz Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Noto_Serif'] text-lg font-bold tracking-tight border-b-2 border-primary pb-1" href="about.html">Our Story</a>
+<a class="font-['Noto_Serif'] text-lg font-bold tracking-tight text-[#383833] dark:text-stone-300 hover:text-primary transition-colors duration-300" href="programs.html">Programs</a>
+<a class="font-['Noto_Serif'] text-lg font-bold tracking-tight text-[#383833] dark:text-stone-300 hover:text-primary transition-colors duration-300" href="workshops.html">Workshops</a>
+<a class="font-['Noto_Serif'] text-lg font-bold tracking-tight text-[#383833] dark:text-stone-300 hover:text-primary transition-colors duration-300" href="community.html">Community</a>
+<a class="font-['Noto_Serif'] text-lg font-bold tracking-tight text-[#383833] dark:text-stone-300 hover:text-primary transition-colors duration-300" href="toolkit.html">Toolkit</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:scale-105 transition-transform duration-300 active:scale-95">
+            Join Now
+        </button>
+</nav>
+</header>
+<main>
+<!-- Our Story & Philosophy Hero -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-on-surface mb-6 relative inline-block">
+                Our Story &amp; <span class="relative">PHILOSOPHY<span class="absolute bottom-1 left-0 w-full h-1 bg-primary rounded-full"></span></span>
+</h1>
+</div>
+</section>
+<!-- Core Content Section -->
+<section class="pb-32 px-6">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+<!-- Our Story Part -->
+<div class="space-y-8">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-headline text-3xl font-bold uppercase tracking-tight">Our Story</h3>
+</div>
+<p class="text-lg leading-relaxed text-on-surface-variant font-medium">
+                    Urjaa Mindz was born from a simple yet powerful realization — a child’s true potential unfolds when nurtured with love, awareness, and the right stimulation from the very beginning. As mothers, we experienced firsthand how early brain-boosting activities, conscious engagement, and sensory-rich experiences created a visible difference in our own children’s growth — emotionally, intellectually, and socially. What started as a personal journey soon transformed into a purpose — to empower other parents with the same awareness, tools, and confidence.
+                </p>
+<div class="grid grid-cols-2 gap-6 mt-12">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-primary/10 flex flex-col gap-3 items-center text-center hover-3d-shadow">
+<span class="text-4xl">💞</span>
+<span class="font-bold text-sm text-secondary">Emotional security</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-primary/10 flex flex-col gap-3 items-center text-center hover-3d-shadow">
+<span class="text-4xl">🧠</span>
+<span class="font-bold text-sm text-secondary">Brain stimulation</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-primary/10 flex flex-col gap-3 items-center text-center hover-3d-shadow">
+<span class="text-4xl">🌈</span>
+<span class="font-bold text-sm text-secondary">Sensory-rich experiences</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-primary/10 flex flex-col gap-3 items-center text-center hover-3d-shadow">
+<span class="text-4xl">💖</span>
+<span class="font-bold text-sm text-secondary">Strong parent-child bonding</span>
+</div>
+</div>
+</div>
+<!-- Philosophy Part -->
+<div class="bg-surface-container-lowest p-10 md:p-12 rounded-3xl border border-primary shadow-lg relative">
+<div class="flex items-center gap-3 text-primary mb-8">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="psychology">psychology</span>
+<h3 class="font-headline text-3xl font-bold uppercase tracking-tight">PHILOSOPHY</h3>
+</div>
+<div class="space-y-8">
+<div class="text-center">
+<span class="inline-block bg-primary-container px-8 py-3 rounded-full font-headline text-2xl font-bold text-on-primary-container shadow-inner">
+                            “स्नेहेन वर्धते बुद्धिः”
+                        </span>
+</div>
+<p class="text-xl font-headline font-bold text-on-surface leading-snug">
+                        Where Affection Becomes the Foundation of Intelligence.
+                    </p>
+<p class="text-lg leading-relaxed text-on-surface-variant italic border-l-4 border-primary/20 pl-6">
+                        At Urjaa Mindz, we believe that a child’s brain develops best not just through teaching, but through affection, connection, and meaningful engagement. Rooted in the wisdom “स्नेहेन वर्धते बुद्धिः”, we see love as the first stimulus for learning. When a child feels safe, valued, and connected, their mind naturally opens to explore, absorb, and grow.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Meet the Founders -->
+<section class="bg-surface py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h2 class="font-headline text-4xl font-bold mb-4">The Hearts Behind Urjaa</h2>
+<p class="text-on-surface-variant mb-12 max-w-2xl mx-auto">Two mothers, one vision. Bringing a combined decade of experience in education and conscious parenting.</p>
+<div class="relative max-w-4xl mx-auto mb-20">
+<!-- Seamlessly blended founder image -->
+<div class="relative z-10 w-full flex justify-center">
+<div class="relative max-w-xl w-full">
+<img alt="Jayashree Jain and Reema Tayshete - Founders of Urjaa Mindz" class="w-full h-auto mix-blend-multiply opacity-100 founder-mask filter contrast-[1.02]" src="https://lh3.googleusercontent.com/aida/ADBb0ugnTS-6nfZILRj0YafXif0-6xEW36HWGPm1jFmg19cRTQHmaMPpWrimuQpj6DwFOOVIQy3jO4yALVFxuHIBivnBChcnv1ez0905HGqFoNzDvA03PfxXNuZV1T_GfFYPsFgTI9amSbnivkAe2Is4BTZwdr_SUtA5qWSf9Tji6FPVcNN1VHYhni7IugdqxugFLN5YXYV7eTAxRUQjYp1OPLG9aiw9yE6_4iSXNpO3E02K_YYSD2NZhzvcBD-6VgWwE6sDu0XaABHOWPY"/>
+<div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+<!-- Founder 1 -->
+<div class="bg-white p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover-3d-shadow">
+<h3 class="font-headline text-2xl font-bold">Jayashree Jain</h3>
+<p class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Co-Founder</p>
+<p class="text-on-surface-variant italic">"Urjaa is my love letter to every child who feels too much and thinks too deeply."</p>
+</div>
+<!-- Founder 2 -->
+<div class="bg-white p-10 rounded-2xl border border-outline-variant/10 shadow-sm hover-3d-shadow">
+<h3 class="font-headline text-2xl font-bold">Reema Tayshete</h3>
+<p class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Co-Founder</p>
+<p class="text-on-surface-variant italic">"We are building a world where children grow like wildflowers—freely, beautifully, and rooted in love."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision & Mission Section -->
+<section class="py-32 px-6 bg-surface-container-low">
+<div class="max-w-6xl mx-auto bg-white p-12 lg:p-20 rounded-3xl border border-outline-variant/10 shadow-2xl relative overflow-hidden">
+<div class="absolute right-0 top-0 opacity-5 -mr-20 -mt-20">
+<span class="material-symbols-outlined text-[300px]" data-icon="compost">compost</span>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl font-bold text-secondary mb-16 text-center lg:text-left">Our Vision &amp; Mission</h2>
+<div class="grid lg:grid-cols-2 gap-20">
+<div class="space-y-6">
+<h4 class="font-bold text-primary uppercase tracking-widest text-xs">Vision</h4>
+<p class="text-2xl font-headline leading-tight font-bold">Raising Aware Minds Through Love &amp; Connection</p>
+<p class="text-on-surface-variant">To create a world where every parent understands that:</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="text-primary">👉</span> Affection is the foundation of intelligence</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="text-primary">👉</span> Connection is the pathway to learning</li>
+</ul>
+<p class="font-bold text-primary pt-4">We envision:</p>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-start gap-2"><span>•</span> Homes becoming the first and most powerful learning spaces</li>
+<li class="flex items-start gap-2"><span>•</span> Parents becoming confident, conscious nurturers</li>
+<li class="flex items-start gap-2"><span>•</span> Children growing into curious, expressive, and self-assured individuals</li>
+</ul>
+<p class="mt-6 text-secondary font-bold text-lg leading-snug">A generation that doesn’t just learn — but blooms with creativity, confidence, and emotional strength 🌸</p>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-primary uppercase tracking-widest text-xs">Mission</h4>
+<p class="text-2xl font-headline leading-tight font-bold">To Nurture Every Child’s Mind Through Love-Led Development</p>
+<p class="text-on-surface-variant">Our mission is to support early childhood development through a balanced approach of love, stimulation, and exploration.</p>
+<p class="font-bold text-primary pt-4">We aim to:</p>
+<ul class="space-y-3 text-on-surface-variant">
+<li class="flex items-start gap-3"><span>🌼</span> Build awareness among new parents about early brain development</li>
+<li class="flex items-start gap-3"><span>🧠</span> Provide brain-boosting activities that enhance cognitive growth</li>
+<li class="flex items-start gap-3"><span>🌈</span> Encourage sensory and experiential learning</li>
+<li class="flex items-start gap-3"><span>💞</span> Strengthen parent-child connection through meaningful engagement</li>
+<li class="flex items-start gap-3"><span>🌱</span> Support each child’s unique potential and natural growth journey</li>
+</ul>
+<div class="mt-8 p-6 bg-surface-container-lowest rounded-2xl border-l-4 border-secondary">
+<p class="text-sm italic text-secondary font-medium leading-relaxed">
+                                Through our 5 pillars — 👉 Love • Stimulate • Explore • Connect • Bloom — we create a strong, loving foundation for lifelong learning.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6">
+<div class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute -top-20 -left-20 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-black text-on-primary mb-8">Be Part of the Growth</h2>
+<p class="text-on-primary/90 text-xl mb-12 max-w-2xl mx-auto">
+                    Our story is still being written, and we'd love for you and your family to be a chapter in it.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform inline-block" href="community.html">
+                        Learn More About Our Community
+                    </a>
+<button class="bg-transparent border-2 border-white text-on-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+                        Contact Our Founders
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white pt-20">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 py-16 max-w-7xl mx-auto gap-12 border-t border-outline-variant/10">
+<div class="max-w-sm">
+<div class="mb-6">
+<img alt="Urjaa Mindz Logo" class="h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</div>
+<p class="font-body text-base text-on-surface-variant leading-relaxed">
+                Nurturing the radiant energy within every mind through a blend of traditional warmth and modern understanding.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-secondary uppercase text-xs tracking-widest">Quick Links</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-secondary uppercase text-xs tracking-widest">Our Essence</span>
+<span class="font-headline text-xl text-[#8e3a1f] font-bold">स्नेहेन वर्धते बुद्धिः</span>
+</div>
+</div>
+</div>
+<div class="w-full px-12 py-8 bg-surface-container-low max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-on-surface-variant/60">
+<span>© 2024 Urjaa Mindz. Wisdom grows through love.</span>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="photo_camera">photo_camera</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="mail">mail</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="share">share</span></a>
+</div>
+</div>
+</footer>
+</body></html>

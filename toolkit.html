@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Urjaa Mindz - Resource Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#995200",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#e4e3d8",
+                        "secondary-container": "#ffc4b8",
+                        "on-secondary-container": "#812a19",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#8d3321",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#fccc38",
+                        "tertiary-fixed": "#ff9734",
+                        "on-primary-container": "#594500",
+                        "on-primary-fixed-variant": "#644e00",
+                        "inverse-on-surface": "#9e9d96",
+                        "surface-container-high": "#efeee5",
+                        "outline": "#81817a",
+                        "surface-container-highest": "#e9e9de",
+                        "on-tertiary-container": "#4d2600",
+                        "surface-bright": "#fefcf4",
+                        "error": "#be2d06",
+                        "surface-tint": "#7c6100",
+                        "error-dim": "#b92902",
+                        "primary": "#7c6100",
+                        "on-tertiary-fixed-variant": "#5a2e00",
+                        "inverse-primary": "#fccc38",
+                        "primary-fixed": "#fccc38",
+                        "surface-container": "#f5f4eb",
+                        "outline-variant": "#bab9b2",
+                        "secondary-fixed": "#ffc4b8",
+                        "surface": "#fefcf4",
+                        "on-error-container": "#520c00",
+                        "on-tertiary-fixed": "#291200",
+                        "secondary-dim": "#973a27",
+                        "surface-variant": "#e9e9de",
+                        "on-secondary-fixed": "#661607",
+                        "secondary": "#a74632",
+                        "on-primary-fixed": "#423200",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#0e0f0a",
+                        "surface-container-low": "#fbf9f1",
+                        "error-container": "#f95630",
+                        "tertiary-container": "#ff9734",
+                        "tertiary-dim": "#874800",
+                        "on-background": "#383833",
+                        "on-surface": "#383833",
+                        "primary-dim": "#6e5500",
+                        "secondary-fixed-dim": "#ffb0a0",
+                        "primary-fixed-dim": "#edbe29",
+                        "tertiary-fixed-dim": "#f58600",
+                        "on-surface-variant": "#65655f",
+                        "on-error": "#ffffff",
+                        "background": "#fefcf4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fefcf4; color: #383833; }
+        .noto-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-glass { backdrop-filter: blur(20px); }
+        .asymmetric-shape { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .organic-blob { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .hover-3d { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .hover-3d:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(124, 97, 0, 0.3); }
+    </style>
+</head>
+<body class="bg-surface overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<nav class="flex justify-between items-center px-4 py-3 max-w-7xl mx-auto">
+<a href="index.html">
+<img class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+<div class="hidden md:flex gap-6 font-bold">
+<a href="index.html">Home</a>
+<a href="story.html">Story</a>
+<a href="programs.html">Programs</a>
+<a href="toolkit.html">Toolkit</a>
+<a href="community.html">Community</a>
+</div>
+<button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+<a class="bg-[#7c6100] text-white px-4 py-2 rounded-full text-sm" href="programs.html">Join</a>
+</nav>
+<div class="hidden flex flex-col gap-4 p-4 bg-white md:hidden" id="mobileMenu">
+<a href="index.html">Home</a>
+<a href="story.html">Story</a>
+<a href="programs.html">Programs</a>
+<a href="toolkit.html">Toolkit</a>
+<a href="community.html">Community</a>
+</div>
+</header>
+<script>
+function toggleMenu(){
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('hidden');
+}
+</script>
+
+<!-- Top Navigation -->
+
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="relative mb-24 overflow-hidden rounded-xl p-8 md:p-16 bg-surface-container-low">
+<div class="absolute -top-24 -right-24 w-96 h-96 organic-blob bg-primary-container/20 -z-0"></div>
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center max-w-none">
+<div class="space-y-6">
+<h1 class="text-5xl md:text-7xl font-['Noto_Serif'] font-black text-primary leading-tight">
+                        The 'Urjaa' Toolkit
+                    </h1>
+<p class="text-xl font-semibold text-on-surface-variant/90 leading-relaxed">
+                        Whether you’re on Zoom calls all day or home 24/7… it’s the same loop in our heads. Guilt when we’re working. Irritation when we’re tired. And that constant worry — ‘Am I doing enough? What activities actually help him grow? How do I keep him engaged without another screen?’
+                    </p>
+<div class="flex flex-col gap-6">
+<div>
+<a class="inline-block bg-[#F4C430] text-on-primary-container px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-300 shadow-md" href="#sensory-play">
+                                Explore our Sensory Play Guide
+                            </a>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center bg-surface-container-lowest px-6 py-3 rounded-full shadow-sm hover-3d">
+<span class="material-symbols-outlined text-primary mr-2">auto_awesome</span>
+<span class="font-semibold text-primary">50+ New Resources</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[400px] w-full">
+<img alt="An Indian mother with her toddler playing with sensory toys while a laptop is nearby" class="w-full h-full object-cover rounded-xl shadow-lg border-4 border-white/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnynbdRT-2Ggqg-uXOaI3QM4T1YPK4ZKnUV3X7XjWRDRxTWk86Fxsouzji_0LelClQ0VlFcSDaZwH6LNbgxzoM12IqkCcW2VvZBg2AW9B5RB1AbWb2mt1IzwEn_GWyS0j4hkeadDRbTURPt9fmlp5AA91_KwUBU8CA7L1QlgXase_0wwfJaU00l-L39FpfqmlKbrsiSf7gzLfxE3AXiN3_hP6FNVqyhw6yxQ-97_K-5QzS8XTnUuTGq7DwE2Cno5VDyVyqjVEacN-2"/>
+</div>
+</div>
+</section>
+<!-- Search & Filter Section -->
+<section class="mb-20">
+<div class="bg-surface-container rounded-xl p-8 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-1 space-y-2">
+<label class="font-bold text-on-surface ml-1">Search Resources</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary rounded-xl" placeholder="Stimulation, Sleep, Play..." type="text"/>
+</div>
+</div>
+<div class="md:col-span-1 space-y-2">
+<label class="font-bold text-on-surface ml-1">Age Group</label>
+<select class="w-full px-4 py-4 bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary rounded-xl appearance-none">
+<option>0-6 Months</option>
+<option>6-12 Months</option>
+<option>1-2 Years</option>
+<option>2-3 Years</option>
+</select>
+</div>
+<div class="md:col-span-1 space-y-2">
+<label class="font-bold text-on-surface ml-1">Pillar of Wisdom</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-primary text-white rounded-full text-sm font-bold">Love</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface-variant hover:bg-primary-container rounded-full text-sm font-bold transition-colors">Stimulate</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface-variant hover:bg-primary-container rounded-full text-sm font-bold transition-colors">Rest</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface-variant hover:bg-primary-container rounded-full text-sm font-bold transition-colors">Listen</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Sanskrit Wisdom -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="noto-serif text-4xl font-bold text-secondary mb-2">Sanskrit Wisdom</h2>
+<p class="text-on-surface-variant max-w-lg italic font-medium">Ancient echoes for modern parenting.</p>
+</div>
+<div class="hidden md:block">
+<span class="noto-serif text-3xl text-secondary/30 italic">स्नेहेन वर्धते बुद्धिः</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Wisdom Card 1 -->
+<div class="group bg-secondary-container/30 rounded-xl p-8 relative overflow-hidden hover-3d">
+<div class="absolute -bottom-10 -right-10 w-40 h-40 asymmetric-shape bg-secondary/10 group-hover:scale-125 transition-transform duration-700"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h3 class="noto-serif text-2xl font-bold text-on-secondary-container mb-4 uppercase tracking-wide">Pancha Kosha</h3>
+<p class="text-on-secondary-container leading-relaxed mb-6">Explore the five sheaths of human personality and how they manifest in early childhood development.</p>
+<a class="inline-flex items-center text-secondary font-black hover:gap-2 transition-all" href="#">
+                            READ JOURNALS <span class="material-symbols-outlined ml-1">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Wisdom Card 2 -->
+<div class="group bg-primary-container/20 rounded-xl p-8 relative overflow-hidden hover-3d">
+<div class="absolute -top-10 -left-10 w-40 h-40 organic-blob bg-primary/10 group-hover:scale-125 transition-transform duration-700"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<h3 class="noto-serif text-2xl font-bold text-on-primary-container mb-4 uppercase tracking-wide">Ritucharya</h3>
+<p class="text-on-primary-container leading-relaxed mb-6">Seasonal routines for toddlers inspired by Ayurvedic principles to maintain balance and immunity.</p>
+<a class="inline-flex items-center text-primary font-black hover:gap-2 transition-all" href="#">
+                            LEARN MORE <span class="material-symbols-outlined ml-1">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Wisdom Card 3 -->
+<div class="md:col-span-2 lg:col-span-1 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between border-b-4 border-secondary/20 hover-3d">
+<div class="noto-serif text-4xl font-black text-secondary leading-snug mb-8">
+                        "Wisdom grows through love."
+                    </div>
+<div class="space-y-4">
+<p class="text-on-surface-variant italic">Every gentle touch and patient word is a seed of intelligence sown in your child's mind.</p>
+<button class="w-full py-4 bg-secondary text-white rounded-xl font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span> Download PDF E-Book
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Sensory Play Guides -->
+<section class="mb-24" id="sensory-play">
+<div class="flex items-center justify-between mb-12">
+<h2 class="noto-serif text-4xl font-bold text-primary">Sensory Play Guides</h2>
+<a class="text-primary font-bold underline underline-offset-4 decoration-2 decoration-primary-container" href="#">View All PDF Guides</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- PDF Preview 1 -->
+<div class="group cursor-pointer hover-3d">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative shadow-md">
+<img alt="Sensory play with colorful textures" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEvPHvXIO_fgbGh5e6WoFVhHbrABCruPoCaDwVaD3VJY9JSdjU3EgiGXjyy_iEPXtIm7b0_6Fuz3zTHrNudg6Q3bgCMi2WZgeCQuBy4R0qqiRfcsmoxKwjSQGMkrhaXk-V67JaHOWFQVTjz1DFEB1gKoXFLmDu9sTiHCxwVRp5bCSfcXQw0lVAUYrGDA_JJ4_KMxwhK-wcYugB8VNF2IATxK-G5z0CfyRXyOVWtFIoYS1uf-BxWjt-xXTEw9MjTtLKz32x-HCBZlwP"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity w-[90%]">
+<button class="w-full py-3 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined">download</span> Download PDF
+                            </button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Texture Exploration</h4>
+<p class="text-sm text-on-surface-variant font-medium">0-12 Months • PDF Guide</p>
+</div>
+</div>
+</div>
+<!-- PDF Preview 2 -->
+<div class="group cursor-pointer hover-3d">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative shadow-md">
+<img alt="Child painting with edible colors" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDawojca5PYMmMGNyfI2n2o8l_OsBgrJuGw61rGphE57uYDkQEaGMAz8CB66ELIv1JtbT_kU5aSasjaBCiQbm3Gxc23pFUdHBIsK-OAg0uVAUHPE2AGj2KXULfyXoY1AeyWnyd1A-EC5QcvvKizzRHL8x8yO671wmFuRrnxDb8-MOXr3C1eDFIgDf45Gggpz5El1hjzsWy3c-7vkc1jcV_4frotKJZCl6LzzLDfSfoUFCo4YYMgJFp7D8Da0CTl6okS746oFWWKRSC"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity w-[90%]">
+<button class="w-full py-3 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined">download</span> Download PDF
+                            </button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Edible Color Magic</h4>
+<p class="text-sm text-on-surface-variant font-medium">1-2 Years • PDF Guide</p>
+</div>
+</div>
+</div>
+<!-- PDF Preview 3 -->
+<div class="group cursor-pointer hover-3d">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative shadow-md">
+<img alt="Wooden blocks play" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM0gMcokSSqXQCzgvU0h18goKudl6BCEKGv3G-ew_TXpzVN196itFdml1uVy-4hnBkBJTd6psLObofWiKjW3k1xZaGia-xBwnLCAMTJr-tIIbyp-u0dpduHGwGWWWB_9SDxAmhvGP8xBNCX6gxR6mXDqJEbj3IaVuLS-18Lv8H34B_D_7oWZGaW14mUwA0tC56yAPbUBGL_f3mGEL4fKTWIOF5Va-FWfsx6Sd7A06I0SbrxQ4bRkbRMqM973pFFO3kxbMFBhO4WZ0e"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity w-[90%]">
+<button class="w-full py-3 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined">download</span> Download PDF
+                            </button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Stacking &amp; Balance</h4>
+<p class="text-sm text-on-surface-variant font-medium">2-3 Years • PDF Guide</p>
+</div>
+</div>
+</div>
+<!-- PDF Preview 4 -->
+<div class="group cursor-pointer hover-3d">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative shadow-md">
+<img alt="Outdoor garden play" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmDfDoaM3eO_eMvXXMlfxbi3WKjhq9eIy2gT4i8A3XO7ialX7ngXAYFTu_Mdos8-KDeT7S3f2kI5OMfWH7BcJljzwMOuyPIY11md8-lZ_ao-xFCCpi_hWCstXroA2xYBkAKV_dzgQzMVfhCIOl70PQTSd6X77SJKSMlX2s8NRy6ctSmdEatXwEOIpqWbbAHMY-xh4VRZ_jQbOiTx5PjCuiyeLKHYetyMXv2nppyXPVm-rSYefnTIqSoX0ArUKDaLrlSccZGUR2VPf"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity w-[90%]">
+<button class="w-full py-3 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined">download</span> Download PDF
+                            </button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Nature's Canvas</h4>
+<p class="text-sm text-on-surface-variant font-medium">All Ages • PDF Guide</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Articles & Tips -->
+<section class="mb-24">
+<h2 class="noto-serif text-4xl font-bold text-on-surface mb-12">Articles &amp; Expert Tips</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Article 1 -->
+<article class="flex flex-col md:flex-row gap-8 items-start hover-3d p-4 rounded-xl transition-colors hover:bg-surface-container-low">
+<div class="w-full md:w-48 h-48 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
+<img alt="Mother and child" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpDn8WF6G920qLoBOgz72FpAGy3IH_HuRm8HZ6dtrRV6-dky_Auovw2kcqrkmpGF2byjnPP2_ZDapRWWeqUh2KJmzxfFz6VqZyrf_mFqdw6Fk8Gx5E3nuGyNSPht_QMk2-xtaUa3niIe-a0ImAQfAHHzmU8-9h4wxAyPndncGDWp_VLGU1RZ2t7I5Q3HnY0Bvi96sLSQLBvyKp5o35zMqPvoM_vM0-AmZeHZUZqYJqlyoiLyr_F23Edp3zQKI9ANz5-Xh9C3iQea-u"/>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-3">
+<span class="text-secondary font-black text-xs uppercase tracking-widest">Psychology</span>
+<span class="text-outline text-xs font-medium">5 Min Read</span>
+</div>
+<h3 class="noto-serif text-2xl font-bold text-on-surface mb-3 hover:text-secondary cursor-pointer transition-colors">Why Eye Contact is Your Toddler's First Love Language</h3>
+<p class="text-on-surface-variant leading-relaxed mb-4">Discover the neurobiology of gaze and how it builds the foundation of secure attachment...</p>
+<button class="text-secondary font-bold inline-flex items-center group">
+                            READ FULL ARTICLE <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="flex flex-col md:flex-row gap-8 items-start hover-3d p-4 rounded-xl transition-colors hover:bg-surface-container-low">
+<div class="w-full md:w-48 h-48 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
+<img alt="Healthy baby snacks" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC__07tgNvdtAtHQVItl2NUCkuYg76NucFfus2V6UAfMggLTb0i5_xw3vHr915bbzv47rWGr9pYxV0ku7r_aLU-t7M9PcP8J7-MNQ8XfRHA57WRUQ2pNYYpUmomJic821IBcKaLOVpwMclaVWLGSBpvDrRskbmEaLUmjHcfaEqjVCPdVk0z5jzvvpAuKT7KJAIfDYNXwDRCjrJwF_mOLJ-f8Ev5pk6Je-i3ld4O1TQpahqlxFb6m1n8puTm2irEM7uDBNNWm1ztcL-T"/>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-3">
+<span class="text-primary font-black text-xs uppercase tracking-widest">Nutrition</span>
+<span class="text-outline text-xs font-medium">8 Min Read</span>
+</div>
+<h3 class="noto-serif text-2xl font-bold text-on-surface mb-3 hover:text-primary cursor-pointer transition-colors">The Mind-Gut Link: Ayurvedic Superfoods for Brain Power</h3>
+<p class="text-on-surface-variant leading-relaxed mb-4">A simple guide to introducing traditional herbs like Brahmi and Shankhapushpi into snack time...</p>
+<button class="text-primary font-bold inline-flex items-center group">
+                            READ FULL ARTICLE <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="bg-primary rounded-xl p-12 text-center text-white relative overflow-hidden hover-3d">
+<div class="absolute -top-10 -left-10 w-64 h-64 organic-blob bg-white/10"></div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 asymmetric-shape bg-white/10"></div>
+<div class="relative z-10 max-w-xl mx-auto">
+<h2 class="noto-serif text-3xl font-bold mb-4">Unlock the Weekly Wisdom</h2>
+<p class="mb-8 text-primary-container font-medium">Join 5,000+ mindful parents receiving weekly tips and toolkit updates.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow px-6 py-4 rounded-full border-none focus:ring-4 focus:ring-primary-container text-on-surface font-medium" placeholder="Your best email address" type="email"/>
+<button class="bg-secondary px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">Subscribe Free</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fefcf4] dark:bg-stone-950 full-width rounded-t-[3rem] mt-20 tonal-layering bg-stone-50 dark:bg-stone-900">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+<div class="max-w-xs">
+<a href="index.html">
+<img alt="Urjaa Mindz Logo" class="w-auto object-contain mb-4 h-32" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+<p class="font-['Noto_Serif'] text-base text-[#383833] dark:text-stone-400 leading-relaxed">
+                    Empowering the next generation through soulful parenting and cognitive excellence.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-12 md:gap-24">
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface uppercase text-sm tracking-widest">Library</h4>
+<ul class="space-y-2 font-['Noto_Serif'] text-base text-[#383833] dark:text-stone-400">
+<li><a class="hover:text-[#F4C430] transition-colors" href="index.html">Home</a></li>
+<li><a class="hover:text-[#F4C430] transition-colors" href="toolkit.html#sensory-play">Sensory Guides</a></li>
+<li><a class="hover:text-[#F4C430] transition-colors" href="toolkit.html#articles">Article Vault</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface uppercase text-sm tracking-widest">Company</h4>
+<ul class="space-y-2 font-['Noto_Serif'] text-base text-[#383833] dark:text-stone-400">
+<li><a class="hover:text-[#F4C430] transition-colors" href="story.html">Our Story</a></li>
+<li><a class="hover:text-[#F4C430] transition-colors" href="programs.html">Programs</a></li>
+<li><a class="hover:text-[#F4C430] transition-colors" href="community.html">Community</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-12 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/10 pt-8 gap-4">
+<p class="font-['Noto_Serif'] text-base text-[#383833] dark:text-stone-400">© 2024 Urjaa Mindz. Wisdom grows through love.</p>
+<span class="text-2xl text-[#8e3a1f] font-bold">स्नेहेन वर्धते बुद्धिः</span>
+</div>
+</footer>
+</body></html>

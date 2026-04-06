@@ -83,49 +83,38 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fefcf4; color: #383833; }
         .serif-text { font-family: 'Noto Serif', serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .blob-shape { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .blob-shape-alt { border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         .sanskrit-glow { text-shadow: 0 0 20px rgba(244, 196, 48, 0.3); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
         .card-3d-hover { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
         .card-3d-hover:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 25px 50px -12px rgba(124, 97, 0, 0.25); }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container">
-<header class="sticky top-0 z-50 bg-white shadow-sm">
-<nav class="flex justify-between items-center px-4 py-3 max-w-7xl mx-auto">
-<a href="index.html">
-<img class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
-</a>
-<div class="hidden md:flex gap-6 font-bold">
-<a href="index.html">Home</a>
-<a href="story.html">Story</a>
-<a href="programs.html">Programs</a>
-<a href="toolkit.html">Toolkit</a>
-<a href="community.html">Community</a>
-</div>
-<button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
-<a class="bg-[#7c6100] text-white px-4 py-2 rounded-full text-sm" href="programs.html">Join</a>
-</nav>
-<div class="hidden flex flex-col gap-4 p-4 bg-white md:hidden" id="mobileMenu">
-<a href="index.html">Home</a>
-<a href="story.html">Story</a>
-<a href="programs.html">Programs</a>
-<a href="toolkit.html">Toolkit</a>
-<a href="community.html">Community</a>
-</div>
-</header>
-<script>
-function toggleMenu(){
-  const m = document.getElementById('mobileMenu');
-  m.classList.toggle('hidden');
-}
-</script>
-
 <!-- TopNavBar -->
-
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 max-w-7xl mx-auto dark:bg-stone-900/80 backdrop-blur-xl rounded-b-[3rem] transition-all duration-300 bg-[#fefcf4]/95">
+<a class="text-2xl font-bold tracking-tight text-[#F4C430] dark:text-[#F4C430]" href="index.html">
+<img alt="Urjaa Mindz Logo" class="w-auto object-contain h-24 bg-transparent" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-[#F4C430] font-bold border-b-4 border-[#F4C430] rounded-full px-2 hover:scale-105 transition-transform" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium px-2 hover:text-[#F4C430] hover:scale-105 transition-transform" href="story.html">Our Story</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium px-2 hover:text-[#F4C430] hover:scale-105 transition-transform" href="programs.html">Programs</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium px-2 hover:text-[#F4C430] hover:scale-105 transition-transform" href="programs.html#workshops">Workshops</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium px-2 hover:text-[#F4C430] hover:scale-105 transition-transform" href="toolkit.html">Toolkit</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium px-2 hover:text-[#F4C430] hover:scale-105 transition-transform" href="community.html">Community</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform active:scale-95 shadow-[0_10px_20px_-5px_rgba(124,97,0,0.3)]">
+        Join Now
+    </button>
+</nav>
 <main class="pt-24 overflow-x-hidden">
 <!-- Hero Section -->
 <section class="relative min-h-[921px] flex items-center justify-center px-6 lg:px-20 mb-24">
 <div class="absolute inset-0 z-0">
-<img alt="Mother and toddler laughing" class="w-full h-full object-cover opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFo1nJrmnCrD75aL_edLkxD3PfxWyjBJxrZ858emo9lq4cGX2Lh10_FRR7xQJyRHYghYss9-2ihHMIt78ZpLeP03TLbFiECjBLRUIoWOmkme7mBQdcBK_g4K-b4U0idQxXQrAl5tLnMxP38T0wIkpjtjdv69GpZYHRxwlHWjGTd_Zkj-NO6MpaUSopdPdniuH2kObQ3QCuzyugqI4eWwdKqchuRzFPbfIe5LL0N0fEyQPc6aWov-Dj2f8hZwoKAXXNItFnlD8tVSVX"/>
+<img alt="Mother and toddler laughing" class="w-full h-full object-cover opacity-20" data-alt="Candid moment of a young Indian mother laughing and playing with her chubby toddler in a sunlit warm-toned living room with soft golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFo1nJrmnCrD75aL_edLkxD3PfxWyjBJxrZ858emo9lq4cGX2Lh10_FRR7xQJyRHYghYss9-2ihHMIt78ZpLeP03TLbFiECjBLRUIoWOmkme7mBQdcBK_g4K-b4U0idQxXQrAl5tLnMxP38T0wIkpjtjdv69GpZYHRxwlHWjGTd_Zkj-NO6MpaUSopdPdniuH2kObQ3QCuzyugqI4eWwdKqchuRzFPbfIe5LL0N0fEyQPc6aWov-Dj2f8hZwoKAXXNItFnlD8tVSVX"/>
 <div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/40 to-surface"></div>
 </div>
 <div class="relative z-10 text-center max-w-5xl mx-auto">
@@ -133,56 +122,66 @@ function toggleMenu(){
 <span class="text-secondary font-semibold tracking-widest uppercase text-sm bg-secondary-container/30 px-6 py-2 rounded-full">Radiant Nurturing</span>
 </div>
 <h1 class="serif-text text-6xl md:text-9xl font-bold text-secondary mb-8 leading-tight sanskrit-glow">
-                    स्नेहेन वर्धते बुद्धिः
-                </h1>
+                स्नेहेन वर्धते बुद्धिः
+            </h1>
 <p class="text-xl md:text-2xl text-on-surface-variant font-medium max-w-3xl mx-auto mb-12 serif-text italic leading-relaxed">
-                    "As a mother, you are the first light your child sees. At Urjaa Mindz, we believe with affection, the intellect grows—nurturing the next generation through love, heart-centered play, and ancient wisdom."
-                </p>
+                "As a mother, you are the first light your child sees. At Urjaa Mindz, we believe with affection, the intellect grows—nurturing the next generation through love, heart-centered play, and ancient wisdom."
+            </p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
 <button class="bg-primary text-on-primary text-lg px-10 py-5 rounded-xl font-bold shadow-xl hover:scale-105 transition-all">Start Your Journey</button>
 <button class="flex items-center gap-3 text-secondary font-bold text-lg hover:underline decoration-2 underline-offset-8 group">
 <span class="material-symbols-outlined bg-secondary-container p-3 rounded-full group-hover:rotate-12 transition-transform">play_circle</span>
-                        See Our Vision
-                    </button>
+                    See Our Vision
+                </button>
 </div>
+</div>
+<!-- Hand-drawn Motifs floating -->
+<div class="absolute top-20 right-10 opacity-40 animate-pulse">
+<span class="material-symbols-outlined text-8xl text-primary" data-icon="filter_vintage" style="font-variation-settings: 'FILL' 1;">filter_vintage</span>
+</div>
+<div class="absolute bottom-20 left-10 opacity-30">
+<span class="material-symbols-outlined text-[10rem] text-secondary" data-icon="psychiatry" style="font-variation-settings: 'FILL' 1;">psychiatry</span>
 </div>
 </section>
-<!-- Philosophy Section -->
+<!-- Philosophy Deep Dive Section -->
 <section class="py-32 relative overflow-hidden bg-surface-container-low rounded-[4rem] mx-4 lg:mx-12">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[40rem] text-primary" data-icon="eco">eco</span>
+</div>
 <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center">
-<div class="order-2 lg:order-1">
+<div class="order-2 lg:order-1 relative">
 <div class="grid grid-cols-2 gap-4">
 <div class="space-y-4">
-<img class="w-full h-80 object-cover rounded-xl shadow-xl card-3d-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQJ85FkrG-GwypHpqtNNy2cwclgkQQEdxNwzl5vuhj3p41Fe-nOrhufS2ow_KfGZGuVmXMNg_XDEXpz0sCOfGuAzgHHn9BjYC3y3MANSw5p3Q5PVEQo7SuxLKAKHTEk-djnSwfajwLQMMbADysNfD5E6tFANLSIfNyUveENE8IOH8vnpKuFPsqK6fB6BYII58kkRySqCEuAwfslmLeEEn_DB40iepg2cUrw3XPxeO7y0QhMdiHCgc9GBxfUdINxJvI1SPhtrnJe-cA"/>
-<img class="w-full h-48 object-cover rounded-xl shadow-xl card-3d-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHTrcqj06ku5oqfhophFdbrtcx2ycUGpX62tT3JSdj-XKk65RxbI_vZk-5t1ACwthUvPrQCWOigvmZCD6GkgySRNuOJ4rqLFv3JRTWUwN5UZWD0ty84rf_s4DyJ10uIkuh0xplNxo1AglyO3LtrJHoR7pFk96jH2E6mG_9-d34n9IpusIuXeDyEH3wLGv2KClm84ciqiv1MtiFIum8VPaQjrWG5yJI3X7S7j6p7cWEzwNX61YQEPaan83TS5bQLkP-h8VKmZGg1uQt"/>
+<img class="w-full h-80 object-cover rounded-xl shadow-xl card-3d-hover" data-alt="Detailed close-up of hands gently cupping a small green plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQJ85FkrG-GwypHpqtNNy2cwclgkQQEdxNwzl5vuhj3p41Fe-nOrhufS2ow_KfGZGuVmXMNg_XDEXpz0sCOfGuAzgHHn9BjYC3y3MANSw5p3Q5PVEQo7SuxLKAKHTEk-djnSwfajwLQMMbADysNfD5E6tFANLSIfNyUveENE8IOH8vnpKuFPsqK6fB6BYII58kkRySqCEuAwfslmLeEEn_DB40iepg2cUrw3XPxeO7y0QhMdiHCgc9GBxfUdINxJvI1SPhtrnJe-cA"/>
+<img class="w-full h-48 object-cover rounded-xl shadow-xl card-3d-hover" data-alt="Interior of a warm wooden library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHTrcqj06ku5oqfhophFdbrtcx2ycUGpX62tT3JSdj-XKk65RxbI_vZk-5t1ACwthUvPrQCWOigvmZCD6GkgySRNuOJ4rqLFv3JRTWUwN5UZWD0ty84rf_s4DyJ10uIkuh0xplNxo1AglyO3LtrJHoR7pFk96jH2E6mG_9-d34n9IpusIuXeDyEH3wLGv2KClm84ciqiv1MtiFIum8VPaQjrWG5yJI3X7S7j6p7cWEzwNX61YQEPaan83TS5bQLkP-h8VKmZGg1uQt"/>
 </div>
 <div class="pt-12">
-<img class="w-full h-full object-cover rounded-xl shadow-xl card-3d-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHubreJhbi8nRPk-uWVHy0OQbyKIMaerS3SM4YvIefuBxsR7JVquUBY7hMD-7DuOjt1RoE3wM54wTyU-4OgneAVfyznGwLCjrSVMEsYrD8ESoAGsnzsrlEiHsTyiswKsuHv1PVQd01U2-jxTpd-RF0P_eHo1bwTKBVHUW5vqx1kMb14NrWTYS5c-CuPNXfL9bn-RYzmES2dTy18FUWBeOabo2lZuk1IzVVCZeBbEZyEUPtlqA7xV6MywJrmmwJ7_kyZflTWj0V0wfK"/>
+<img class="w-full h-full object-cover rounded-xl shadow-xl card-3d-hover" data-alt="Toddler painting with watercolors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHubreJhbi8nRPk-uWVHy0OQbyKIMaerS3SM4YvIefuBxsR7JVquUBY7hMD-7DuOjt1RoE3wM54wTyU-4OgneAVfyznGwLCjrSVMEsYrD8ESoAGsnzsrlEiHsTyiswKsuHv1PVQd01U2-jxTpd-RF0P_eHo1bwTKBVHUW5vqx1kMb14NrWTYS5c-CuPNXfL9bn-RYzmES2dTy18FUWBeOabo2lZuk1IzVVCZeBbEZyEUPtlqA7xV6MywJrmmwJ7_kyZflTWj0V0wfK"/>
 </div>
 </div>
 </div>
 <div class="order-1 lg:order-2">
 <h2 class="serif-text text-secondary text-5xl md:text-7xl font-black mb-8 leading-tight sanskrit-glow">
-                        स्नेहेन वर्धते बुद्धिः
-                    </h2>
+                    स्नेहेन वर्धते बुद्धिः
+                </h2>
 <p class="text-2xl serif-text italic text-primary-dim mb-10">"Wisdom grows through love."</p>
 <div class="space-y-10 text-lg text-on-surface-variant">
 <div class="flex gap-6 items-start">
-<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl">psychology</span>
+<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl" data-icon="psychology">psychology</span>
 <div>
 <h4 class="font-bold text-on-surface text-xl mb-1">Cognitive Empathy</h4>
 <p class="font-medium">We believe learning is more than memorization. It's about feeling the connection between facts and the heart.</p>
 </div>
 </div>
 <div class="flex gap-6 items-start">
-<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl">groups</span>
+<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl" data-icon="groups">groups</span>
 <div>
 <h4 class="font-bold text-on-surface text-xl mb-1">Village-Led Growth</h4>
 <p class="font-medium">Every child is surrounded by a community of "Urjaa" mentors who lead with presence and patience.</p>
 </div>
 </div>
 <div class="flex gap-6 items-start">
-<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl">auto_awesome</span>
+<span class="material-symbols-outlined text-primary text-4xl shrink-0 bg-primary-container/20 p-3 rounded-xl" data-icon="auto_awesome">auto_awesome</span>
 <div>
 <h4 class="font-bold text-on-surface text-xl mb-1">Joyful Rigor</h4>
 <p class="font-medium">We challenge the mind through play, curiosity, and the unwavering belief in every child's innate wisdom.</p>
@@ -198,7 +197,7 @@ function toggleMenu(){
 <h2 class="serif-text text-5xl font-bold mb-4">Our Nurturing Pillars</h2>
 <p class="text-on-surface-variant max-w-xl mx-auto italic">Five paths to blooming potential</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto">
 <!-- Pillar 1: Love -->
 <div class="md:col-span-3 bg-secondary-container/40 p-10 rounded-xl flex flex-col justify-between card-3d-hover border border-secondary/10">
 <div class="mb-6">
@@ -210,7 +209,7 @@ function toggleMenu(){
 <p class="font-medium text-on-secondary-container mb-6">At Urjaa Mindz, everything begins with affection and emotional security. When a child feels loved, their brain becomes more receptive to learning.</p>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
-<p class="text-sm font-bold text-secondary">Focus: 🔸 Emotional bonding, Safe, secure environment, Positive reinforcement</p>
+<p class="text-sm font-bold text-secondary flex items-center gap-2">Focus: 🔸 Emotional bonding, Safe, secure environment, Positive reinforcement</p>
 </div>
 </div>
 <!-- Pillar 2: Stimulate -->
@@ -224,7 +223,7 @@ function toggleMenu(){
 <p class="font-medium text-on-primary-container mb-6">The early years are critical for brain development. We use intentional, brain-boosting activities to strengthen neural connections.</p>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
-<p class="text-sm font-bold text-primary">Focus: 🔸 Memory &amp; concentration, Cognitive development, Brain activation exercises</p>
+<p class="text-sm font-bold text-primary flex items-center gap-2">Focus: 🔸 Memory &amp; concentration, Cognitive development, Brain activation exercises</p>
 </div>
 </div>
 <!-- Pillar 3: Explore -->
@@ -273,111 +272,78 @@ function toggleMenu(){
 </section>
 <!-- Vision & Mission -->
 <section class="py-24 px-6 lg:px-20 relative">
-<div class="max-w-6xl mx-auto">
-<div class="bg-surface-container-lowest p-12 lg:p-16 rounded-xl shadow-sm border border-outline-variant/10 card-3d-hover">
-<div class="grid md:grid-cols-2 gap-16">
-<div>
-<h4 class="font-bold text-primary uppercase tracking-widest text-sm mb-4">Vision</h4>
-<h2 class="serif-text text-3xl font-bold text-secondary mb-6">Raising Aware Minds Through Love &amp; Connection</h2>
-<p class="text-on-surface-variant mb-6">To create a world where every parent understands that:</p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-start gap-3 text-on-surface-variant"><span class="text-secondary">👉</span> Affection is the foundation of intelligence</li>
-<li class="flex items-start gap-3 text-on-surface-variant"><span class="text-secondary">👉</span> Connection is the pathway to learning</li>
-</ul>
-<p class="font-bold text-primary mb-3">We envision:</p>
-<ul class="space-y-2 text-on-surface-variant mb-8">
-<li class="flex items-center gap-2">• Homes becoming the first and most powerful learning spaces</li>
-<li class="flex items-center gap-2">• Parents becoming confident, conscious nurturers</li>
-<li class="flex items-center gap-2">• Children growing into curious, expressive, and self-assured individuals</li>
-</ul>
-<p class="text-secondary font-semibold italic">A generation that doesn’t just learn — but blooms with creativity, confidence, and emotional strength 🌸</p>
+<div class="max-w-5xl mx-auto space-y-12">
+<div class="bg-surface-container-lowest p-12 lg:p-20 rounded-xl shadow-sm border border-outline-variant/10 relative overflow-hidden card-3d-hover">
+<div class="absolute -right-20 -top-20 opacity-5 transform rotate-45">
+<span class="material-symbols-outlined text-[20rem]" data-icon="compost">compost</span>
 </div>
-<div>
-<h4 class="font-bold text-primary uppercase tracking-widest text-sm mb-4">Mission</h4>
-<h2 class="serif-text text-3xl font-bold text-secondary mb-6">To Nurture Every Child’s Mind Through Love-Led Development</h2>
-<p class="text-on-surface-variant mb-6">Our mission is to support early childhood development through a balanced approach of love, stimulation, and exploration.</p>
-<p class="font-bold text-primary mb-3">We aim to:</p>
-<ul class="space-y-4 text-on-surface-variant">
-<li class="flex items-start gap-3">
-<span class="text-xl">🌼</span>
-<span>Build awareness among new parents about early brain development</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-xl">🧠</span>
-<span>Provide brain-boosting activities that enhance cognitive growth</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-xl">🌈</span>
-<span>Encourage sensory and experiential learning</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-xl">💞</span>
-<span>Strengthen parent-child connection through meaningful engagement</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="text-xl">🌱</span>
-<span>Support each child’s unique potential and natural growth journey</span>
-</li>
+<div class="relative z-10">
+<h2 class="serif-text text-4xl font-bold text-secondary mb-8">Our Vision &amp; Mission</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h4 class="font-bold text-primary uppercase tracking-widest text-sm">Vision</h4>
+<p class="text-xl serif-text leading-relaxed font-bold mb-4">Raising Aware Minds Through Love &amp; Connection</p>
+<p class="text-on-surface-variant mb-4">To create a world where every parent understands that:</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">👉</span> Affection is the foundation of intelligence</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">👉</span> Connection is the pathway to learning</li>
 </ul>
-<p class="mt-8 p-4 bg-primary-container/20 rounded-lg text-sm italic text-secondary-dim font-medium">
+<p class="font-bold text-primary mb-2">We envision:</p>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-start gap-2 text-on-surface-variant">• Homes becoming the first and most powerful learning spaces</li>
+<li class="flex items-start gap-2 text-on-surface-variant">• Parents becoming confident, conscious nurturers</li>
+<li class="flex items-start gap-2 text-on-surface-variant">• Children growing into curious, expressive, and self-assured individuals</li>
+</ul>
+<p class="mt-4 text-secondary font-medium">A generation that doesn’t just learn — but blooms with creativity, confidence, and emotional strength 🌸</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-primary uppercase tracking-widest text-sm">Mission</h4>
+<p class="text-xl serif-text leading-relaxed font-bold mb-4">To Nurture Every Child’s Mind Through Love-Led Development</p>
+<p class="text-on-surface-variant mb-4">Our mission is to support early childhood development through a balanced approach of love, stimulation, and exploration.</p>
+<p class="font-bold text-primary mb-2">We aim to:</p>
+<ul class="space-y-2 text-on-surface-variant mb-6">
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">🌼</span> Build awareness among new parents about early brain development</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">🧠</span> Provide brain-boosting activities that enhance cognitive growth</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">🌈</span> Encourage sensory and experiential learning</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">💞</span> Strengthen parent-child connection through meaningful engagement</li>
+<li class="flex items-start gap-2 text-on-surface-variant"><span class="flex-shrink-0">🌱</span> Support each child’s unique potential and natural growth journey</li>
+</ul>
+<p class="text-sm italic text-secondary font-medium">
                                 Through our 5 pillars — 👉 Love • Stimulate • Explore • Connect • Bloom — we create a strong, loving foundation for lifelong learning.
                             </p>
 </div>
 </div>
 </div>
 </div>
+</div>
 </section>
 <!-- Community CTA -->
-<section class="py-32 px-6 text-center bg-gradient-to-br from-primary-container/20 to-secondary-container/20">
-<div class="max-w-4xl mx-auto">
+<section class="py-32 px-6 text-center bg-gradient-to-br from-primary-container/20 to-secondary-container/20 overflow-hidden relative">
+<div class="max-w-4xl mx-auto relative z-10">
 <h2 class="serif-text text-5xl md:text-7xl font-bold text-on-surface mb-8">Join the Urjaa Journey</h2>
 <p class="text-xl md:text-2xl text-on-surface-variant mb-12 max-w-2xl mx-auto">
-                    Be part of a thriving community of 5,000+ mothers who are rediscovering the joy of nurturing.
-                </p>
-<div class="bg-surface p-8 rounded-xl shadow-lg inline-block card-3d-hover">
-<div class="flex flex-col items-center gap-6">
+                Be part of a thriving community of 5,000+ mothers who are rediscovering the joy of nurturing.
+            </p>
+<div class="flex flex-wrap justify-center gap-6">
+<div class="bg-surface p-8 rounded-xl shadow-lg w-full md:w-auto card-3d-hover">
+<div class="flex flex-col items-center gap-4">
 <div class="flex -space-x-4">
 <img alt="Avatar" class="w-12 h-12 rounded-full border-4 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOLlJjnRRYUHgCvTY2-ODKYoOJvgGFi4BxCQHC04Ke9HAL1gnyEciFPzHPNYsg0dSSw8_w4P74i9uoKe3ocYrIXpLDrpJuJrWJm-R9xikx5zCwcNsVhulvIvACUxXLZ0TDbvXAiiv7qgZ9Ni92-VYf6iPRrzF_TY--SgiCLRiojgnLOckbpT4paR4ubAbFgW8HT6dy3fTg-U_5ChAxYR1pmYX74ijKpBOw5bYfXdr9vQQq7tl0oaPK-tmL4o6afW91u45hCO5UHVti"/>
 <img alt="Avatar" class="w-12 h-12 rounded-full border-4 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMM1Aql9BDILN1LudC2tu_XwGl91_8oEnykhYPTo-wAQVlG033Ko8u62EPQNpZ1OJSbCXJAFXIiPmFfxym3v__n_cpDuy0Jv4rXVBKo9KsXuRX9R340h-z_hf2JJQGYB9bSJjF2LXQLVgBSRsjReMmC4mGVY_Gk-6mYR5zvx11gNhr52OSfg1SpfZXacF3rjDR_5OBnzCW1opKbPF9Z2fKhBbRC-0Y5CAabOsAIgYLcW-eBFciscQ4P_rfMSB1MfW671U4_I59GF8_"/>
 <img alt="Avatar" class="w-12 h-12 rounded-full border-4 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd2H12Ub8tZr3CE5frd1qImgsUNH05RZorZT64tvtgFLxvDil98Aqk8TRcXS7BnpLvh1GWVoB7JNYWkP3nEVGmmUADD2dv_BZ_FBdUfwTiGGWolDbnmlZrxQ6km4-uRv3w57tlSFC6Rc8dJoOlbP33szjvDZwGBYQFGRBEc9JE9U_A_vcbtdZa-VjdQxNkAKKCysRwyxbTxV05apEIBeCxgR0KOCC7p6AC7i35A9jUTFnA_HTO0tQSS1GuAxCmDkLyxuUjGu5j5r1I"/>
 </div>
 <span class="font-bold text-primary">5k+ Mothers Joined</span>
-<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all active:scale-95" onclick="window.location.href='community.html'">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-shadow active:scale-95" onclick="window.location.href='community.html'">
                             Enter the Community
                         </button>
 </div>
 </div>
 </div>
+</div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary-container/30 rounded-full blur-3xl"></div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-16 px-8 flex flex-col items-center text-center gap-8 bg-white border-t border-surface-dim">
-<a href="index.html">
-<img alt="Urjaa Mindz Logo" class="w-auto h-32 md:h-40 object-contain mx-auto bg-transparent" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
-</a>
-<p class="serif-text text-3xl md:text-4xl font-bold text-secondary sanskrit-glow">
-            स्नेहेन वर्धते बुद्धिः
-        </p>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="story.html">Our Story</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="programs.html">Programs</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="community.html">Community</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="toolkit.html">Toolkit</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="privacy.html">Privacy Policy</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="terms.html">Terms of Service</a>
-<a class="text-stone-500 font-medium hover:text-stone-900 transition-colors" href="contact.html">Contact Us</a>
-</div>
-<p class="text-stone-400 text-sm">© 2024 Urjaa Mindz. स्नेहेन वर्धते बुद्धिः</p>
-<div class="flex gap-6">
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
-<span class="material-symbols-outlined">social_leaderboard</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
-<span class="material-symbols-outlined">groups</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
-<span class="material-symbols-outlined">favorite</span>
-</a>
-</div>
-</footer>
+
 </body></html>

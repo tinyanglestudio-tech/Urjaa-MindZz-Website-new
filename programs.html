@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Programs &amp; Workshops | Urjaa Mindz</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#995200",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#e4e3d8",
+                    "secondary-container": "#ffc4b8",
+                    "on-secondary-container": "#812a19",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#8d3321",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#fccc38",
+                    "tertiary-fixed": "#ff9734",
+                    "on-primary-container": "#594500",
+                    "on-primary-fixed-variant": "#644e00",
+                    "inverse-on-surface": "#9e9d96",
+                    "surface-container-high": "#efeee5",
+                    "outline": "#81817a",
+                    "surface-container-highest": "#e9e9de",
+                    "on-tertiary-container": "#4d2600",
+                    "surface-bright": "#fefcf4",
+                    "error": "#be2d06",
+                    "surface-tint": "#7c6100",
+                    "error-dim": "#b92902",
+                    "primary": "#7c6100",
+                    "on-tertiary-fixed-variant": "#5a2e00",
+                    "inverse-primary": "#fccc38",
+                    "primary-fixed": "#fccc38",
+                    "surface-container": "#f5f4eb",
+                    "outline-variant": "#bab9b2",
+                    "secondary-fixed": "#ffc4b8",
+                    "surface": "#fefcf4",
+                    "on-error-container": "#520c00",
+                    "on-tertiary-fixed": "#291200",
+                    "secondary-dim": "#973a27",
+                    "surface-variant": "#e9e9de",
+                    "on-secondary-fixed": "#661607",
+                    "secondary": "#a74632",
+                    "on-primary-fixed": "#423200",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#0e0f0a",
+                    "surface-container-low": "#fbf9f1",
+                    "error-container": "#f95630",
+                    "tertiary-container": "#ff9734",
+                    "tertiary-dim": "#874800",
+                    "on-background": "#383833",
+                    "on-surface": "#383833",
+                    "primary-dim": "#6e5500",
+                    "secondary-fixed-dim": "#ffb0a0",
+                    "primary-fixed-dim": "#edbe29",
+                    "tertiary-fixed-dim": "#f58600",
+                    "on-surface-variant": "#65655f",
+                    "on-error": "#ffffff",
+                    "background": "#fefcf4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background-color: #fefcf4;
+            color: #383833;
+        }
+        .noto-serif {
+            font-family: "Noto Serif", serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+        .blob-shape {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+        .program-bubble {
+            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+            aspect-ratio: 1/1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+        .asymmetric-blob-1 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .asymmetric-blob-2 { border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%; }
+        .asymmetric-blob-3 { border-radius: 60% 40% 50% 50% / 40% 40% 60% 60%; }
+        
+        .hover-3d {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-3d:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+        }
+        .blob-card {
+            border-radius: 2rem 1rem 3rem 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<header class="sticky top-0 z-50 bg-white shadow-sm rounded-b-[3rem]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a href="index.html">
+<img class="h-24 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+<div class="hidden md:flex items-center gap-8 font-['Noto_Serif'] text-lg font-bold tracking-tight">
+<a class="nav-home" href="index.html">Home</a>
+<a class="nav-story" href="story.html">Our Story</a>
+<a class="nav-programs" href="programs.html">Programs</a>
+<a href="programs.html#workshops">Workshops</a>
+<a class="nav-toolkit" href="toolkit.html">Toolkit</a>
+<a class="nav-community" href="community.html">Community</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">Join Now</button>
+</nav>
+</header>
+
+<!-- Top Navigation Bar -->
+
+<main class="pt-40 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24 relative overflow-hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/20 blob-shape z-0"></div>
+<div class="relative z-10 text-center md:text-left md:max-w-2xl">
+<span class="text-secondary font-bold text-lg mb-4 block">स्नेहेन वर्धते बुद्धिः</span>
+<h1 class="noto-serif text-5xl md:text-7xl font-black text-on-surface mb-6 leading-tight">
+                    Nurturing <span class="text-primary italic">Brilliant</span> Minds
+                </h1>
+<p class="text-xl text-on-surface-variant mb-10 leading-relaxed">
+                    Science-backed programs designed to celebrate and stimulate your toddler's natural curiosity through play, connection, and wisdom.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-transform duration-300 shadow-lg">View Programs</button>
+<button class="bg-surface-container-highest text-primary px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-transform duration-300 shadow-md">Book Workshop</button>
+</div>
+</div>
+<div class="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
+<img alt="Toddler painting" class="w-full h-full object-cover rounded-[5rem] shadow-2xl rotate-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7JPJuEcyzNL2mpgcaETXGI7s7pQe3MFj8d4784jLK7JHk3odGjGyO7M0QZl0ords8XFIJaosmezpAr_Sv9gzikSE9NAzbXz8AXmjLoA2TN1UphG4bICDyZkEf8eh0N_M6ayvmHR7fJYC7y1u02VXkiz4XK_QOIM5OISDTdAySEr-QSKPiBumac73JEmp3hB7POVjZYzkcwixD4j8C0HL73XVbkWV-y5D2shT8xeXC9QZMF0ab4BbhWZ1iUO081s-gZN68dsErVp-0"/>
+</div>
+</section>
+<!-- Brain-Boosting Programs (Bubble Layout) -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center">
+<h2 class="noto-serif text-4xl font-black mb-4">Brain-Boosting Programs</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Foundational curriculum tailored for ages 1-4, focusing on holistic neural development.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Sensory Play -->
+<div class="bg-white program-bubble shadow-xl hover-3d text-center border border-primary-container/20">
+<div class="w-40 h-40 mb-8 rounded-full overflow-hidden shadow-inner ring-4 ring-primary/10">
+<img alt="Sensory Play" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQHJhzRLUqKgjOzYAwz72dwrKwWHqEX71IYNvD0bc8qTapJmW04CtqvwhgFIF2rrb-7PYNev41PAXcPXukvhIgQ2GReXUpOYHLEz2PegzQVoywZ-rHoQGkM6OzdIA2AB_HZITiKPJxB8WmWKEfeKyWI3zZoDLMtzsou2fRH3-GDqwOHqykqlvMTXwNDNHEHyNdD_-vCEQBrAYmlGnDC9IKVHG42JPhPJckF5L_nGFDIxUCRHAoHoU6OycIqC5SEoflqAyE4_7ket99"/>
+</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Sensory Play</h3>
+<p class="text-on-surface-variant text-sm mb-6">Exploration through touch, sound, and sight to build strong neural pathways in the early years.</p>
+<div class="flex items-center text-primary font-bold cursor-pointer group">
+<span>Learn more</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Memory & Focus -->
+<div class="bg-white program-bubble shadow-xl hover-3d text-center border border-primary-container/20">
+<div class="w-40 h-40 mb-8 rounded-full overflow-hidden shadow-inner ring-4 ring-primary/10">
+<img alt="Memory &amp; Focus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS_YHJmxiT-fxMw-OgxTeAXgmsL0rRFIfW4tHwCxmxNPCqiHPB6FEALcnfNH1Q6cElq8FCv9nyFPi_5a4TR6zRl1ZfCTiRPzl50AHJcNzuF8Rmdvhw485pUogHkJLkwqcNVHzYGN962W3zB2wfr4L-loNsBz1EaboNpItY1cFsK1Z8XxNJYPuySJIsEKKfnL66mCHoOC7fe31pC3pqTIFOw4gMbT78-QR8k0i9TJoaV6GKGMjJEKVqA8EiEl06rlh3JMIHLO994hbB"/>
+</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Memory &amp; Focus</h3>
+<p class="text-on-surface-variant text-sm mb-6">Playful activities designed to improve retention and lengthen attention spans through joyful engagement.</p>
+<div class="flex items-center text-primary font-bold cursor-pointer group">
+<span>Learn more</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Cognitive Activation -->
+<div class="bg-white program-bubble shadow-xl hover-3d text-center border border-primary-container/20">
+<div class="w-40 h-40 mb-8 rounded-full overflow-hidden shadow-inner ring-4 ring-primary/10">
+<img alt="Cognitive Activation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACbn-WQ3wEqCGOKxdt1pwwaNSzHnv4sU6S8Tv58S84uTVJ5VYa1YtqDAFLiLc5xPPA85dcBScQHNmwnfcDDEyleSPvj6hqGsk8HWWbEhSIwfIU_V-NdxsO0ie-u-mqIk8Us2C91B6QBD42uaskk8lSS_kov8TGqeFqrREK1Zkp9EGzLL3GEbZOF0HhBUmgDSpkmvXgvwQFJwRAPoPKRwpg3XOHWwXAjjYT4PLXgh8I30QCKz19sV4dAd7fORMR1UBXsaAJy3V0aJv6"/>
+</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Cognitive Activation</h3>
+<p class="text-on-surface-variant text-sm mb-6">Advanced problem-solving games that stimulate critical thinking and logical reasoning early on.</p>
+<div class="flex items-center text-primary font-bold cursor-pointer group">
+<span>Learn more</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Montessori Play Ideas (Asymmetrical Layout) -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40">
+<div class="absolute top-[10%] left-[5%] w-96 h-96 bg-[#f5f4eb] rounded-full blur-3xl"></div>
+<div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-[#fbf9f1] rounded-full blur-3xl"></div>
+<div class="absolute bottom-[10%] left-[-5%] w-80 h-80 bg-surface-container-high rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="mb-24 text-center">
+<h2 class="noto-serif text-5xl font-black mb-4">Montessori Play Ideas</h2>
+<p class="text-on-surface-variant text-xl max-w-xl mx-auto font-medium">Child-led exploration for independent minds.</p>
+</div>
+<div class="space-y-32">
+<!-- Texture Sorting -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 asymmetric-blob-1 blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<img alt="Texture Sorting" class="w-full max-w-md h-[400px] object-cover asymmetric-blob-1 shadow-2xl hover-3d relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1yM3fZzZNlsWyovZ07b2j2lE2EtmAKhHFxLmqhwYyz7zrkfc80v_RNTajoVJg6c0mtS7f9_19GX-Mlt4oFBlbowNddHKHlSCqmekV_CHWeoOMfsqnoLIShZNgGBRt8cc3uVobYX87dCm0gn4PK5wdVqXFeDpGUh3APdpQfCW_oNwJ-olDxC68Kk1Mqn0yX7gVYxaroDBGnHnBoXevdWjjVqpcUmnuvqzssMNObZDmV7Xi3cIIWu_5X3MBqdDKEMqH-ylnq5BL6rkr"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-center md:text-left">
+<div class="inline-flex items-center justify-center w-14 h-14 bg-surface-container-highest rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">touch_app</span>
+</div>
+<h3 class="noto-serif text-4xl font-bold mb-6">Texture Sorting</h3>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed max-w-md mx-auto md:mx-0">Engage tactile senses by organizing natural objects by their unique surface patterns. A simple way to build sensory focus.</p>
+<button class="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover-3d shadow-lg">
+<span class="material-symbols-outlined text-xl">description</span>
+                                Download PDF Guide
+                            </button>
+</div>
+</div>
+<!-- Nature Mandalas -->
+<div class="flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 text-center md:text-left">
+<div class="inline-flex items-center justify-center w-14 h-14 bg-surface-container-highest rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">filter_vintage</span>
+</div>
+<h3 class="noto-serif text-4xl font-bold mb-6">Nature Mandalas</h3>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed max-w-md mx-auto md:mx-0">Create beautiful symmetrical patterns using leaves, stones, and petals from your garden. Fosters creativity and geometry.</p>
+<button class="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover-3d shadow-lg">
+<span class="material-symbols-outlined text-xl">description</span>
+                                Download PDF Guide
+                            </button>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 asymmetric-blob-2 blur-2xl group-hover:bg-secondary/20 transition-all"></div>
+<img alt="Nature Mandalas" class="w-full max-w-md h-[400px] object-cover asymmetric-blob-2 shadow-2xl hover-3d relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaiDKJ2qx7GDYfJGhYzTpeIcPQ71mGTXRoAW9yy4HMoR8PqzU7HrDiRe8xNwI2ndF9_9QFM_KU1c1T_olHRTmZQIRsXhLzviJsqBGVMau5j8aodQwqo7-Pe3NrUT_JcrMZ3vy75_ox99MZMQbdYS7O-3M7gLz_XupLVWxzq3Zc55Jn5IS4l7YDE9ebB4YgsDKFw1VHRqyVs01aXciZKQ-zGqjBCwBW-Dx-oLf_1MLlBaTgP8Y5ETbNQGdLiG_3QJXtFOhRTMwFO24Z"/>
+</div>
+</div>
+</div>
+<!-- Water Pouring -->
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/10 asymmetric-blob-3 blur-2xl group-hover:bg-tertiary/20 transition-all"></div>
+<img alt="Water Pouring" class="w-full max-w-md h-[400px] object-cover asymmetric-blob-3 shadow-2xl hover-3d relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUZGXvCcWW36R9aoXX2ZIjMU1ayVNpIwipuyDCSN_KQi1RCasNy6xQduRosfYyhICQ0LMTPU0tz_yiH6hCFQo4Zb6AYoe-5SU76Ps_fC55XwI6C1R14qZ9m6FCRawBB6Hm2vG9gPBuCWIuoydjVnNY3aLSD357seWKSAH7hsflez0KqqyOOcb7Z3q0We9IHwRWb44-xMX0vYKxWk96vZOimBtu5kS0pUhVGKoqVpJWeCUGroAnKgXGsZ6K_QX_ALZjY2VQ7Dy2STk6"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-center md:text-left">
+<div class="inline-flex items-center justify-center w-14 h-14 bg-surface-container-highest rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">opacity</span>
+</div>
+<h3 class="noto-serif text-4xl font-bold mb-6">Water Pouring</h3>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed max-w-md mx-auto md:mx-0">Develop fine motor control and concentration through mindful liquid transfer exercises. A foundational Montessori classic.</p>
+<button class="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover-3d shadow-lg">
+<span class="material-symbols-outlined text-xl">description</span>
+                                Download PDF Guide
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DIY Activities Section -->
+<section class="py-24 bg-[#fefcf4] relative">
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#7c6100 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="mb-16 text-center">
+<h2 class="noto-serif text-4xl font-black mb-4">DIY Activities</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto font-medium">Simple home experiments for big discoveries.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Kitchen Science -->
+<div class="bg-white p-6 blob-card shadow-xl hover-3d border-4 border-[#fccc38] relative group">
+<div class="w-full h-48 mb-6 rounded-[2rem] overflow-hidden">
+<img alt="Kitchen Science" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPoa6rPIjwGTdGcdmete8tbP1bZLgWlzsQHvMTBEkrkeAe2z2Jbwmu1oVBBJGRsWXOxY4iLXAxBr0Ztdw0F-5cQd1mT4wfI0mtvBHj8HPPIPE1vVUDQo8OUhJCGKgjndUbk3_WWb_HXIXQyEiB8CpzQmdDCRN7tmpUmb4ANiCN7bOPgjQcgwDXsUoNgxZJ02bbANAm0sTxIwAKnzxGLKF6FvOeTZ0iWawNLrEk1g_yf9VORrxJAFAcz1MWky4xvXWx9lElBt-kl46D"/>
+</div>
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-[#fccc38] rounded-full flex items-center justify-center text-[#594500] font-black rotate-12">DIY</div>
+<h3 class="noto-serif text-2xl font-bold mb-4 text-primary">Kitchen Science</h3>
+<p class="text-on-surface-variant mb-8">Turn everyday pantry staples into exciting chemical reactions and sensory wonders.</p>
+<button class="w-full flex items-center justify-center gap-2 bg-[#fccc38] text-[#594500] px-6 py-4 rounded-full font-black hover:bg-[#e6b800] transition-colors shadow-lg">
+<span class="material-symbols-outlined text-2xl">draw</span>
+                            Download PDF Guide
+                        </button>
+</div>
+<!-- Cardboard Castles -->
+<div class="bg-white p-6 blob-card shadow-xl hover-3d border-4 border-[#a74632] relative group">
+<div class="w-full h-48 mb-6 rounded-[2rem] overflow-hidden">
+<img alt="Cardboard Castles" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbBWXQ-dvXoln0WAUu9MRWXwQ5eKj0kG15eXX_od1H12IxUssn6S5cPUAlUBam_55eHKu2TTrVnITA9ozIRdLkA69n3uSwUnACWPjU5qn8DKUbN2c-guQaua-uh_vFaEDC1-urH_rENNRb--ZkZsaTcsWG_wj3bbKXXko8MneCSVa4Dnj_cziO04LrB-LGwUmil2hzW6skdGlubMdlwi6nYTo0upmbHPZw0b6BGaeaqknaLZk12zpeMWu5dxnMW4REuykzIkTdW8Z2"/>
+</div>
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-[#a74632] rounded-full flex items-center justify-center text-white font-black -rotate-12">DIY</div>
+<h3 class="noto-serif text-2xl font-bold mb-4 text-[#a74632]">Cardboard Castles</h3>
+<p class="text-on-surface-variant mb-8">Unlock engineering skills by transforming shipping boxes into grand imaginative fortresses.</p>
+<button class="w-full flex items-center justify-center gap-2 bg-[#a74632] text-white px-6 py-4 rounded-full font-black hover:bg-[#8e3a29] transition-colors shadow-lg">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+                            Download PDF Guide
+                        </button>
+</div>
+<!-- Homemade Shakers -->
+<div class="bg-white p-6 blob-card shadow-xl hover-3d border-4 border-[#ff9734] relative group">
+<div class="w-full h-48 mb-6 rounded-[2rem] overflow-hidden">
+<img alt="Homemade Shakers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa4jBXYDieK4RvTB9Ma3TST9G855PFGwH2f7pMtrY7yeAkCUYur2y_hSWWfDTnyjSxxzB4ptpRt4LU1g8XcUHmdMnPsV3z29e-bU9SQF9R4kzO1tzX9wXC4jaaDDd_fHLvAslmlxbEVYD4s7LC8RTRm9wa8tlJJpdedYHltl3-aIlWD3pnmPk9SdNucsV6prSqUL34v-QjzLYVMC9u-MggnCtjYqgG6Rtta8MTVZHFcLzmHIH6lgC8OcVY8lCddfG84he5rCPV432H"/>
+</div>
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-[#ff9734] rounded-full flex items-center justify-center text-white font-black rotate-6">DIY</div>
+<h3 class="noto-serif text-2xl font-bold mb-4 text-[#995200]">Homemade Shakers</h3>
+<p class="text-on-surface-variant mb-8">Explore rhythm and sound by crafting custom musical instruments from recycled materials.</p>
+<button class="w-full flex items-center justify-center gap-2 bg-[#ff9734] text-[#4d2600] px-6 py-4 rounded-full font-black hover:bg-[#e68a00] transition-colors shadow-lg">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+                            Download PDF Guide
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Workshops Section -->
+<section class="py-24 max-w-7xl mx-auto px-8" id="workshops">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<h2 class="noto-serif text-4xl font-black mb-4">Live Workshops for Moms</h2>
+<p class="text-on-surface-variant">Connect with experts and fellow mothers in our immersive live sessions.</p>
+</div>
+<button class="text-primary font-bold flex items-center group">
+                    View Full Calendar 
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">calendar_month</span>
+</button>
+</div>
+<div class="space-y-6">
+<!-- Workshop Item 1 -->
+<div class="flex flex-col md:flex-row items-center p-6 rounded-xl gap-8 group shadow-xl bg-surface-container-lowest hover-3d border border-primary/5">
+<div class="bg-primary-container text-on-primary-container p-6 rounded-xl text-center min-w-[120px]">
+<span class="block text-sm font-bold uppercase tracking-widest">Oct</span>
+<span class="block text-3xl font-black">12</span>
+</div>
+<div class="flex-1">
+<h4 class="noto-serif text-xl font-bold mb-1">Mindful Motherhood: The First 500 Days</h4>
+<p class="text-on-surface-variant">Understanding the emotional and neurological shifts in you and your baby.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full">Limited Spots</span>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold transition-transform shadow-md">Register</button>
+</div>
+</div>
+<!-- Workshop Item 2 -->
+<div class="flex flex-col md:flex-row items-center p-6 rounded-xl gap-8 group shadow-xl bg-surface-container-lowest hover-3d border border-primary/5">
+<div class="bg-secondary text-on-secondary p-6 rounded-xl text-center min-w-[120px]">
+<span class="block text-sm font-bold uppercase tracking-widest">Oct</span>
+<span class="block text-3xl font-black">18</span>
+</div>
+<div class="flex-1">
+<h4 class="noto-serif text-xl font-bold mb-1">Sanskrit Mantras &amp; Baby Brain Development</h4>
+<p class="text-on-surface-variant">Exploring the resonance and cognitive benefits of ancient sound vibrations.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium bg-surface-container-highest px-4 py-1 rounded-full">Online Only</span>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold transition-transform shadow-md">Register</button>
+</div>
+</div>
+<!-- Workshop Item 3 -->
+<div class="flex flex-col md:flex-row items-center p-6 rounded-xl gap-8 group shadow-xl bg-surface-container-lowest hover-3d border border-primary/5">
+<div class="bg-primary-container text-on-primary-container p-6 rounded-xl text-center min-w-[120px]">
+<span class="block text-sm font-bold uppercase tracking-widest">Oct</span>
+<span class="block text-3xl font-black">25</span>
+</div>
+<div class="flex-1">
+<h4 class="noto-serif text-xl font-bold mb-1">Feeding Curiosity: Nutrition for Smart Minds</h4>
+<p class="text-on-surface-variant">Science-backed dietary guides for toddlers during peak brain growth periods.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full">Free Webinar</span>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold transition-transform shadow-md">Register</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="bg-secondary-container/30 py-24 rounded-t-[3rem] mt-20 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-20">
+<h2 class="noto-serif text-4xl font-black mb-4">How It Works</h2>
+<p class="text-on-surface-variant">A simple journey toward your child's brighter future.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="relative shadow-2xl bg-white p-10 rounded-2xl hover-3d border border-primary/5">
+<div class="w-24 h-24 bg-primary text-on-primary flex items-center justify-center blob-shape mx-auto mb-8 text-3xl font-black shadow-lg">1</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Choose</h3>
+<p class="text-on-surface-variant">Select the program or workshop that best aligns with your child's current development stage.</p>
+<div class="hidden md:block absolute top-12 left-full w-full h-0.5 border-t-2 border-dashed border-primary/30 -z-10 translate-x-[-20%]"></div>
+</div>
+<div class="relative shadow-2xl bg-white p-10 rounded-2xl hover-3d border border-primary/5">
+<div class="w-24 h-24 bg-primary text-on-primary flex items-center justify-center blob-shape mx-auto mb-8 text-3xl font-black shadow-lg">2</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Connect</h3>
+<p class="text-on-surface-variant">Join our curated sessions online or in-person and engage with our expert nurturing mentors.</p>
+<div class="hidden md:block absolute top-12 left-full w-full h-0.5 border-t-2 border-dashed border-primary/30 -z-10 translate-x-[-20%]"></div>
+</div>
+<div class="shadow-2xl bg-white p-10 rounded-2xl hover-3d border border-primary/5">
+<div class="w-24 h-24 bg-primary text-on-primary flex items-center justify-center blob-shape mx-auto mb-8 text-3xl font-black shadow-lg">3</div>
+<h3 class="noto-serif text-2xl font-bold mb-4">Grow</h3>
+<p class="text-on-surface-variant">Watch as wisdom and confidence bloom through structured play and consistent nurturing.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-5xl mx-auto px-8 mt-24">
+<div class="bg-primary p-12 md:p-20 rounded-xl text-center relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #fff 1px, transparent 0); background-size: 40px 40px;"></div>
+<h2 class="noto-serif text-4xl md:text-5xl font-black text-on-primary mb-6 relative z-10">Start Their Journey Today</h2>
+<p class="text-primary-container text-xl mb-10 relative z-10 font-medium">Ready to see the Urjaa Mindz difference? Experience a trial session with us.</p>
+<button class="bg-on-primary text-primary px-12 py-5 rounded-xl text-xl font-black hover:scale-110 transition-transform duration-300 relative z-10 shadow-lg">
+                    Register for a Trial Session
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-white shadow-[0_-10px_20px_rgba(0,0,0,0.02)]">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+<div class="flex-1">
+<div class="mb-6">
+<a href="index.html">
+<img alt="Urjaa Mindz Logo" class="w-auto object-contain h-40" src="https://lh3.googleusercontent.com/aida/ADBb0ugvzcQNpNcLUPfQAqQ4YyLMPzIUXNSo1HKcSDk0QXMwNg02x3gTHtp0ADfZOqWECQQHDCAilBiqrl_gW_0LhKyCO0vmp375NEv-WfL3ro8CISr6uQtr227M3D2UAPbhg4xRGO7tVrI-9JTkLn9MlfPT2uf0NuoKVjHonf8wQX7ep3tvsPnq5ulMP9GQVuN14lG4Bi_coLm54pJWQ4eCUXI6Qh74yJDbtiwKzyim9kE-b6t-PNpyyu_CazQ6JtWTOP398CaFe-3e5Mg"/>
+</a>
+</div>
+<p class="noto-serif text-base text-[#383833] max-w-xs">
+                    Nurturing ancient wisdom for modern little minds. Helping mothers navigate the beautiful journey of parenthood.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h5 class="font-bold text-[#8e3a1f] mb-6">Explore</h5>
+<div class="flex flex-col gap-3">
+<a class="noto-serif text-base text-[#383833] hover:text-primary transition-colors" href="story.html">About Us</a>
+<a class="noto-serif text-base text-[#383833] hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="noto-serif text-base text-[#383833] hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-[#8e3a1f] mb-6">Wisdom</h5>
+<p class="noto-serif text-base text-[#8e3a1f] font-bold">स्नेहेन वर्धते बुद्धिः</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-primary/10 text-center">
+<p class="noto-serif text-base text-[#383833]">© 2024 Urjaa Mindz. Wisdom grows through love.</p>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40 md:hidden">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span>
+</button>
+<script>document.querySelector(".nav-programs").classList.add("text-[#F4C430]","border-b-2");</script></body></html>
